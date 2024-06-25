@@ -1,1 +1,4 @@
 *.pyc
+IXI/TransMorph/IXI_data/
+IXI/TransMorph/logs/
+IXI/TransMorph/experiments/
