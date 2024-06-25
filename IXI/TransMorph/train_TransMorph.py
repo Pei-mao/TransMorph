@@ -27,9 +27,9 @@ class Logger(object):
 
 def main():
     batch_size = 1
-    atlas_dir = '/NFS/PeiMao/GitHub/TransMorph_Transformer_for_Medical_Image_Registration/IXI/TransMorph/IXI_data/atlas.pkl'
-    train_dir = '/NFS/PeiMao/GitHub/TransMorph_Transformer_for_Medical_Image_Registration/IXI/TransMorph/IXI_data/Train/'
-    val_dir = '/NFS/PeiMao/GitHub/TransMorph_Transformer_for_Medical_Image_Registration/IXI/TransMorph/IXI_data/Val/'
+    atlas_dir = '/NFS/PeiMao/GitHub/TransMorph/IXI/TransMorph/IXI_data/atlas.pkl'
+    train_dir = '/NFS/PeiMao/GitHub/TransMorph/IXI/TransMorph/IXI_data/Train/'
+    val_dir = '/NFS/PeiMao/GitHub/TransMorph/IXI/TransMorph/IXI_data/Val/'
     weights = [1, 1] # loss weights
     save_dir = 'TransMorph_ncc_{}_diffusion_{}/'.format(weights[0], weights[1])
     if not os.path.exists('experiments/'+save_dir):
