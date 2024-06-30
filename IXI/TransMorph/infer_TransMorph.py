@@ -10,13 +10,14 @@ from natsort import natsorted
 from models.TransMorph import CONFIGS as CONFIGS_TM
 import models.TransMorph as TransMorph
 import torch.nn as nn
+import ipdb
 
 def main():
-    atlas_dir = 'Path_to_IXI_data/atlas.pkl'
-    test_dir = 'Path_to_IXI_data/Val/'
+    atlas_dir = '/NFS/PeiMao/GitHub/TransMorph/IXI/TransMorph/IXI_data/atlas.pkl'
+    test_dir = '/NFS/PeiMao/GitHub/TransMorph/IXI/TransMorph/IXI_data/Test/'
     model_idx = -1
     weights = [1, 1]
-    model_folder = 'TransMorph_ncc_{}_diffusion_{}/'.format(weights[0], weights[1])
+    model_folder = 'TransMorph_ncc_{}_diffusion_{}_official/'.format(weights[0], weights[1])
     model_dir = 'experiments/' + model_folder
     if 'Val' in test_dir:
         csv_name = model_folder[:-1]+'_Val'

@@ -4,6 +4,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as font_manager
 from scipy.stats import wilcoxon, ttest_rel, ttest_ind
+import ipdb
 
 def set_box_color(bp, color):
     plt.setp(bp['boxes'], color=color)
@@ -14,7 +15,7 @@ def set_box_color(bp, color):
     plt.setp(bp['medians'], color='dodgerblue')
 
 file_dir = 'Results/'
-file_name = ['CoTr_ncc_1_diffusion_1', 'PVT_ncc_1_diffusion_1', 'ViTVNet_ncc_1_diffusion_1', 'nnFormer_ncc_1_diffusion_1', 'TransMorphDiff', 'TransMorphBspline_ncc_1_diffusion_1', 'TransMorphBayes_ncc_1_diffusion_1', 'TransMorph_ncc_1_diffusion_1']
+file_name = ['CoTr_ncc_1_diffusion_1', 'PVT_ncc_1_diffusion_1', 'ViTVNet_ncc_1_diffusion_1', 'nnFormer_ncc_1_diffusion_1', 'TransMorphDiff', 'TransMorphBSpline_ncc_1_diffusion_1', 'TransMorphBayes_ncc_1_diffusion_1', 'TransMorph_ncc_1_diffusion_1']
 substruct = ['Left-Cerebral-White-Matter','Left-Cerebral-Cortex','Left-Lateral-Ventricle','Left-Inf-Lat-Vent','Left-Cerebellum-White-Matter','Left-Cerebellum-Cortex','Left-Thalamus-Proper*',
              'Left-Caudate','Left-Putamen','Left-Pallidum','3rd-Ventricle','4th-Ventricle','Brain-Stem','Left-Hippocampus','Left-Amygdala','CSF','Left-Accumbens-area','Left-VentralDC',
              'Left-vessel','Left-choroid-plexus','Right-Cerebral-White-Matter','Right-Cerebral-Cortex','Right-Lateral-Ventricle','Right-Inf-Lat-Vent','Right-Cerebellum-White-Matter',
@@ -125,4 +126,5 @@ plt.ylim(-0.05, 1.05)
 plt.tight_layout()
 plt.xticks(rotation=90)
 plt.gcf().subplots_adjust(bottom=0.4)
+#plt.savefig('boxplot_comparison.png', bbox_inches='tight')
 plt.show()
